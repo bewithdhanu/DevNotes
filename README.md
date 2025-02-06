@@ -1,6 +1,3 @@
-Here's a comprehensive README.md for the project:
-
-```markdown:README.md
 # Code Notes App
 
 A minimalist, keyboard-friendly note-taking application with code editor features and infinite scrolling. Built with React, TypeScript, and IndexedDB.

@@ -137,12 +137,15 @@ class NotesDatabase extends Dexie {
 
   async getNotes(page: number = 0, limit: number = 20): Promise<Note[]> {
     const dbNotes = await this.notes
-      .orderBy('updated_at')
+      .orderBy('created_at')
       .reverse()
       .offset(page * limit)
       .limit(limit)
       .toArray();
-    return dbNotes.filter((note): note is Note => note.id !== undefined);
+
+    return dbNotes
+      .filter((note): note is Note => note.id !== undefined)
+      .sort((a, b) => new Date(b.created_at).getTime() - new Date(a.created_at).getTime());
   }
 
   async getNotesForDate(
@@ -159,7 +162,10 @@ class NotesDatabase extends Dexie {
       .limit(limit)
       .toArray();
 
-    return dbNotes.filter((note): note is Note => note.id !== undefined);
+    // Sort again to ensure correct order
+    return dbNotes
+      .filter((note): note is Note => note.id !== undefined)
+      .sort((a, b) => new Date(b.created_at).getTime() - new Date(a.created_at).getTime());
   }
 
   async createNote(content: string, created_at?: string, updated_at?: string) {

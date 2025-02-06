@@ -65,14 +65,16 @@ function App() {
   const { notes, hasMore, loadNotes, searchNotes, createNote, updateNote, deleteNote } = useNoteStore();
 
   useEffect(() => {
+    // Reset page and load notes when search or date changes
+    setPage(0);
     if (searchQuery) {
       searchNotes(searchQuery);
     } else if (selectedDate) {
       loadNotes(0, selectedDate);
     } else {
-      loadNotes(page);
+      loadNotes(0);
     }
-  }, [loadNotes, page, searchQuery, searchNotes, selectedDate]);
+  }, [loadNotes, searchQuery, searchNotes, selectedDate]); // Remove page from dependencies
 
   const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
     const query = e.target.value;
@@ -104,12 +106,13 @@ function App() {
   const handleDateSelect = async (date: Date) => {
     setSelectedDate(date);
     setPage(0);
+    await loadNotes(0, date);  // Explicitly load notes for selected date
   };
 
   const handleDateReset = () => {
     setSelectedDate(null);
     setPage(0);
-    loadNotes(0);
+    loadNotes(0);  // Load all notes from beginning
   };
 
   return (
