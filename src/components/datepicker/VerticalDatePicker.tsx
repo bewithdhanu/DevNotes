@@ -125,7 +125,7 @@ export const VerticalDatePicker: React.FC<VerticalDatePickerProps> = ({
             </div>
 
             <div className="grid grid-cols-7 gap-1">
-              {getDaysInMonth(currentMonth).map(date => {
+              {getDaysInMonth(currentMonth).map((date: Date) => {
                 const isEnabled = isDateEnabled(date);
                 const isSelected = isDateSelected(date);
                 
