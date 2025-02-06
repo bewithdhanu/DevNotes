@@ -21,12 +21,12 @@ A minimalist, keyboard-friendly note-taking application with code editor feature
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/bewithdhanu/code-notes-app.git
+git clone https://github.com/bewithdhanu/DevNotes.git
 ```
 
 2. Install dependencies:
 ```bash
-cd code-notes-app
+cd DevNotes
 npm install
 ```
 
