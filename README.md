@@ -2,6 +2,8 @@
 
 A minimalist, keyboard-friendly note-taking application with code editor features and infinite scrolling. Built with React, TypeScript, and IndexedDB.
 
+This application was fully generated using Cursor IDE + Claude-3.5-Sonnet AI assistant.
+
 ## Features
 
 - 🎨 Code editor-like interface
@@ -129,23 +131,9 @@ SOFTWARE.
 - Uses Tailwind CSS for styling
 - Built with React and TypeScript
 - Stores data using IndexedDB via Dexie.js
-```
 
-This README includes:
-1. Feature overview
-2. Installation instructions
-3. Usage guide
-4. Development information
-5. Contributing guidelines
-6. MIT License
-7. Project structure
-8. Tech stack details
-9. Testing instructions
-10. Acknowledgments
+This project was bootstrapped with Create React App and enhanced through AI pair programming using:
+- Cursor IDE
+- Claude-3.5-Sonnet AI Assistant
 
-You can customize it further by:
-- Adding screenshots
-- Including more specific setup instructions
-- Adding badges (build status, version, etc.)
-- Including more detailed contributing guidelines
-- Adding contact information
+The entire codebase including components, styling, and functionality was generated through natural language conversations with the AI assistant.
