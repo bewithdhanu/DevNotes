@@ -1,0 +1,87 @@
+/* Remove all default styles */
+.App, .App-logo, .App-header, .App-link {
+  display: none;
+}
+
+/* Hide scrollbar for all elements by default */
+* {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+*::-webkit-scrollbar {
+  display: none;
+}
+
+/* Keep scrolling functionality */
+.scroll-area {
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+}
+
+/* Custom scrollbar only for elements with hide-scrollbar class */
+.hide-scrollbar:hover {
+  scrollbar-width: thin;
+  -ms-overflow-style: auto;
+}
+
+.hide-scrollbar:hover::-webkit-scrollbar {
+  display: block;
+  width: 4px;
+}
+
+.hide-scrollbar:hover::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.hide-scrollbar:hover::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+.hide-scrollbar:hover::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Custom styles for react-datepicker */
+.react-datepicker {
+  font-family: inherit !important;
+  background-color: #1e1e1e !important;
+  border-color: #404040 !important;
+}
+
+.react-datepicker__header {
+  background-color: #2d2d2d !important;
+  border-bottom-color: #404040 !important;
+}
+
+.react-datepicker__current-month,
+.react-datepicker__day-name {
+  color: #d4d4d4 !important;
+}
+
+.react-datepicker__day {
+  color: #d4d4d4 !important;
+}
+
+.react-datepicker__day:hover {
+  background-color: #404040 !important;
+}
+
+.react-datepicker__day--selected {
+  background-color: #2563eb !important;
+}
+
+.react-datepicker__day--disabled {
+  color: #6b7280 !important;
+  cursor: not-allowed !important;
+}
+
+.react-datepicker__navigation {
+  top: 8px !important;
+}
+
+.react-datepicker__navigation-icon::before {
+  border-color: #d4d4d4 !important;
+}
